@@ -1,0 +1,4 @@
+tsc --init  // To create typescript config file
+
+1. Make sure npm start works and then go ahead to setup kubernetes
+

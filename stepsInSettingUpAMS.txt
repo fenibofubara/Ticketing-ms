@@ -1,0 +1,37 @@
+N/b: Unskippable HTTPS warning in chrome:
+Just type: thisisunsafe
+
+
+
+1. Setup express server for the first service, run it and confirm everything starts well first.
+2. Setup the deployment config file and then do: docker build -t droomwork/auth .
+3. Run: minikube start  [global terminal context]
+        Run the following command on the root directory*:
+        eval $(minikube docker-env)    [Inside the path of your file]
+
+N/B: If skaffold does not automatically reload changes, do the following to the start script in package.json file: 
+ts-node-dev --poll src/index.ts
+
+4. Setup the ingress load balanscer to be able to access your pods from outside th cluster
+
+============= ErrorHandling In MicroServices ===============
+Since ms involves the useage of different languages & frameworks which may have different error reporting format, its good to provide a standard error
+
+n/B: Ensure you use a mix of interface, class and implement on your class body to prevent common errors and typos
+
+===== Types of classes ===
+1. class : A model for an object
+2. Subclass: Extends property of a class
+3. Abstract Class: Used to set up requirements for subclasses
+
+Abstract classes & interface those similar job of a gateway which creates a pass requirement for objects to get into a class
+
+================= Abstract classes ==============
+1. Cannot be instantiated
+2. Used to set up requirements for subclasses
+3. Do create a class when translated to JS. which ,means we can use it in 'instanceof' check
+
+===================== On Mysql Database Deployment =============
+imagePullPolicy: Never    [This those not work with mysql image deployment]
+
+
